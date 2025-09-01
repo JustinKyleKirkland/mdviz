@@ -53,10 +53,17 @@ dev = [
 Homepage = "https://github.com/JustinKyleKirkland/mdviz"
 Repository = "https://github.com/JustinKyleKirkland/mdviz"
 Issues = "https://github.com/JustinKyleKirkland/mdviz/issues"
+Documentation = "https://github.com/JustinKyleKirkland/mdviz#readme"
+
+[project.scripts]
+mdviz-demo = "mdviz.examples.demo:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["mdviz*"]
+
+[tool.setuptools.package-data]
+mdviz = ["examples/*.py", "examples/*.ipynb"]
 
 [tool.black]
 line-length = 88
